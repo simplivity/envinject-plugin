@@ -276,7 +276,7 @@ public class EnvInjectPasswordWrapper extends BuildWrapper {
     }
 
 
-    @Extension
+    @Extension(ordinal = -1)
     @SuppressWarnings("unused")
     public static final class DescriptorImpl extends BuildWrapperDescriptor {
 

@@ -35,9 +35,9 @@ public class EnvInjectBuildWrapper extends BuildWrapper implements Serializable 
 
     @Nonnull
     private EnvInjectJobPropertyInfo info;
-    
+
     private static final Logger LOGGER = Logger.getLogger(EnvInjectBuildWrapper.class.getName());
-    
+
     @DataBoundConstructor
     public EnvInjectBuildWrapper(@Nonnull EnvInjectJobPropertyInfo info) {
         this.info = info;
@@ -141,7 +141,7 @@ public class EnvInjectBuildWrapper extends BuildWrapper implements Serializable 
         }
     }
 
-    @Extension
+    @Extension(ordinal = -1)
     @SuppressWarnings("unused")
     public static final class DescriptorImpl extends BuildWrapperDescriptor {
 
