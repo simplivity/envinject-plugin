@@ -59,7 +59,7 @@ public class EnvInjectPasswordWrapper extends BuildWrapper {
 
     private boolean injectGlobalPasswords;
     private boolean maskPasswordParameters;
-    
+
     @CheckForNull
     private EnvInjectPasswordEntry[] passwordEntries;
 
@@ -74,7 +74,7 @@ public class EnvInjectPasswordWrapper extends BuildWrapper {
     public boolean isMaskPasswordParameters() {
         return maskPasswordParameters;
     }
-    
+
     public void setInjectGlobalPasswords(boolean injectGlobalPasswords) {
         this.injectGlobalPasswords = injectGlobalPasswords;
     }
@@ -82,7 +82,7 @@ public class EnvInjectPasswordWrapper extends BuildWrapper {
     public void setMaskPasswordParameters(boolean maskPasswordParameters) {
         this.maskPasswordParameters = maskPasswordParameters;
     }
-    
+
     /**
      * Retrieves raw array of password entries.
      * @return Array of password entries or {@code null} if the array is not specified
@@ -93,7 +93,7 @@ public class EnvInjectPasswordWrapper extends BuildWrapper {
     public EnvInjectPasswordEntry[] getPasswordEntries() {
         return passwordEntries == null ? null : Arrays.copyOf(passwordEntries, passwordEntries.length);
     }
-    
+
     /**
      * Provides a read-only list of password entry sets.
      * @return List of password entries.
@@ -172,7 +172,7 @@ public class EnvInjectPasswordWrapper extends BuildWrapper {
                     }
                 }
             }
-            
+
             return new EnvInjectPasswordsOutputStream(outputStream, passwords2decorate);
 
         } catch (EnvInjectException ee) {
@@ -242,7 +242,7 @@ public class EnvInjectPasswordWrapper extends BuildWrapper {
         public void close() throws IOException {
             super.close();
             logger.close();
-        }       
+        }
     }
 
     @Override
@@ -273,7 +273,7 @@ public class EnvInjectPasswordWrapper extends BuildWrapper {
     }
 
 
-    @Extension
+    @Extension(ordinal = -1)
     @SuppressWarnings("unused")
     public static final class DescriptorImpl extends BuildWrapperDescriptor {
 
