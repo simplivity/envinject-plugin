@@ -276,7 +276,7 @@ public class EnvInjectPasswordWrapper extends BuildWrapper {
     }
 
 
-    @Extension
+    @Extension(ordinal = -1)
     public static final class DescriptorImpl extends BuildWrapperDescriptor {
 
         @Override
