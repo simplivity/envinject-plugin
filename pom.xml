@@ -9,7 +9,7 @@
     </parent>
 
     <artifactId>envinject</artifactId>
-    <version>1.93.1</version>
+    <version>1.93.1-svt1</version>
     <packaging>hpi</packaging>
     <name>Environment Injector Plugin</name>
     <url>https://wiki.jenkins-ci.org/display/JENKINS/EnvInject+Plugin</url>
@@ -79,7 +79,7 @@
           <artifactId>maven-hpi-plugin</artifactId>
           <extensions>true</extensions>
           <configuration>
-            <!-- Fix of JENKINS-31573 changed the property file parsing approach. 
+            <!-- Fix of JENKINS-31573 changed the property file parsing approach.
                  Now it follows the Java property file standard. -->
             <compatibleSinceVersion>1.93</compatibleSinceVersion>
           </configuration>
